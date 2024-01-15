@@ -44,7 +44,7 @@ export const App = () => {
         }
         setPhotos(prev => [...prev, ...hits]);
         setIsLoadMore(page < Math.ceil(total / 12));
-      } catch {
+      } catch (error) {
         setError(error.message);
       } finally {
         setIsLoading(false);
